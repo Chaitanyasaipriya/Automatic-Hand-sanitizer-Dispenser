@@ -1,0 +1,18 @@
+#Circuit Setup:
+# LDR and IR LED Setup:
+Connect the LDR in series with a resistor to form a voltage divider circuit. Connect this circuit to a power supply.
+Connect the IR LED to a power supply with an appropriate current-limiting resistor.
+
+#IR Detection:
+Place the IR photodiode or phototransistor near the IR LED (facing it) to detect reflected infrared light.
+Connect the photodiode or phototransistor to the base of the NPN transistor.
+
+#Motor/Pump Setup:
+Connect the motor or pump to the relay module. The relay should be controlled by the collector of the NPN transistor.
+Connect the relay module to the power supply.
+
+#How It Works:
+Similar to the Arduino-based setup, the LDR measures ambient light, and the IR sensor detects reflected infrared light when an object (like a hand) is placed near the dispenser.
+When both conditions are met, the photodiode or phototransistor conducts, allowing current to flow from the collector to the emitter of the NPN transistor.
+The transistor acts as a switch, activating the relay module. When the relay is energized, it turns on the motor or pump, dispensing sanitizer.
+Please note that the specific resistor values and transistor type might need adjustment based on the specifications of the components you use. Always check the datasheets and experiment cautiously to ensure proper functioning and safety of the circuit. Also, ensure that the power supply provides the necessary voltage and current for the motor/pump and other components.
